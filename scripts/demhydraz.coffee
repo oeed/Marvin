@@ -40,5 +40,5 @@ vimQuotes = [
 module.exports = (robot) ->
   robot.hear /functional programming/i, (msg) ->
     msg.send msg.random functionalQuotes
-  robot.hear /vi(m)?/i, (msg) ->
-    msg.send msg.random functionalQuotes
+  robot.hear /(^|\W+?)vi(m)?/i, (msg) ->
+    msg.send msg.random vimQuotes
