@@ -2,4 +2,4 @@
 
 module.exports = (robot) ->
   robot.hear /fuck|shit|cunt/i, (msg) ->
-    msg.emote "/me slaps #{msg.message.user.name} across the face with his large, depressingly metal hand."
+    msg.send "Marvin slaps #{msg.message.user.name} across the face with his large, depressingly metal hand."
