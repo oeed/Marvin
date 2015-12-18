@@ -25,19 +25,19 @@ qsort([Pivot|Rest], Smaller) ->
 
    qsort([Y || Y <- Rest, not(Smaller(Y, Pivot))], Smaller).
 ```"""
-    "![xkcd: Functional](https://imgs.xkcd.com/comics/functional.png)
+  "![xkcd: Functional](https://imgs.xkcd.com/comics/functional.png)
 
-    _Functional programming combines the flexibility and power of abstract mathematics with the intuitive clarity of abstract mathematics._"
+  _Functional programming combines the flexibility and power of abstract mathematics with the intuitive clarity of abstract mathematics._"
 ]
 
 vimQuotes = [
-    "![vim](http://sparkmasterflex.com/wp-content/uploads/2014/06/vi-sucks.png)"
-    "![plz](http://s.quickmeme.com/img/ad/add2365d6fedbaf8437b8bb78d3d17edb1b32108c1a11c991eaddee8e7910044.jpg)"
-    "vim? You poor little thing."
-    "Here I am, brain the size of a planet and I still can't figure out how to use vim. Call that a good editor? ‘Cos I don’t."
+  "![vim](http://sparkmasterflex.com/wp-content/uploads/2014/06/vi-sucks.png)"
+  "![plz](http://s.quickmeme.com/img/ad/add2365d6fedbaf8437b8bb78d3d17edb1b32108c1a11c991eaddee8e7910044.jpg)"
+  "vim? You poor little thing."
+  "Here I am, brain the size of a planet and I still can't figure out how to use vim. Call that a good editor? ‘Cos I don’t."
 ]
 
- module.exports = (robot) ->
+module.exports = (robot) ->
   robot.hear /functional programming/i, (msg) ->
     msg.send msg.random functionalQuotes
   robot.hear /vi(m)?/i, (msg) ->
