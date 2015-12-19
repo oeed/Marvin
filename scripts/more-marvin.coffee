@@ -30,7 +30,7 @@ lifeQuotes = [
 module.exports = (robot) ->
   robot.hear /^marvin!*\?*\.*$/i, (msg) ->
     msg.send msg.random helloQuotes
-  robot.hear /(.*)help(.*)/i, (msg) ->
+  robot.hear /\bhelp\b/i, (msg) ->
     msg.send msg.random helpQuotes
   robot.respond /(\w+) love (.*?)\s*(Marvin)?(\.)?$/i, (res) ->
     love = res.match[2]
@@ -38,5 +38,5 @@ module.exports = (robot) ->
       res.reply "I hate " + love + "."
   robot.hear /(any\s*)idea(s)(\?)?/, (msg) ->
     msg.send msg.random ideasQuotes
-  robot.hear /(.*)(life)(.*)/i, (msg) ->
+  robot.hear /\blife\b/i, (msg) ->
     msg.send msg.random lifeQuotes
